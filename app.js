@@ -1,5 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
+
+require('./models/home')
+const Home = mongoose.model('Home')
+
 const app = express()
 const port = 8000
 
@@ -18,6 +22,21 @@ mongoose.connect('mongodb://localhost:27017/api_app', {
 
 app.get('/', (req, res) => {
   res.json({name: "Joao"})
+})
+
+app.post('/', async(req, res) => {
+  Home.create(req.body, (err) => {
+    if(err) return res.status(400).json({
+      error:true,
+      message:"Erro"
+    })
+  })
+  
+  return res.json({
+    error:false,
+      message:"Cadastrado com sucesso"
+  
+  })
 })
 
 app.listen(port, () => {
