@@ -1,0 +1,22 @@
+{
+  "name": "js_api_app",
+  "version": "1.0.0",
+  "description": "App desenvolvido na Imersão Node.js, React e React Native 3.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopaulomoreira/js_api_app.git"
+  },
+  "author": "Joao Paulo Carvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaopaulomoreira/js_api_app/issues"
+  },
+  "homepage": "https://github.com/joaopaulomoreira/js_api_app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
