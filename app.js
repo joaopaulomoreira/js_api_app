@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.json({name: "Joao"})
 })
 
-app.post('/', async(req, res) => {
+app.post('/home', async(req, res) => {
   Home.create(req.body, (err) => {
     if(err) return res.status(400).json({
       error:true,
